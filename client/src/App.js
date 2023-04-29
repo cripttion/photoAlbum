@@ -1,19 +1,24 @@
 import './App.css';
-<<<<<<< HEAD
-import Card from './Component/Card';
-
-function App() {
-  return (
-    <div className="App ml-4 mt-4">
-      <Card />
-    </div>
-=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Card from './Component/Card'
+import Header from './Component/Header';
+import About from './Component/About';
+import Contact from './Component/Contact';
+import Create from './Component/Create';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
-    hi and hello
+    <Header/>
+    
+      <Routes>
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/create" element={<Create />} />
+      </Routes>
+    
     </>
->>>>>>> origin/main
+   
   );
 }
 
