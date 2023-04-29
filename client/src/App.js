@@ -1,9 +1,10 @@
 import './App.css';
+import Card from './Component/Card';
 
 function App() {
   return (
     <div className="App ml-4 mt-4">
-        <h1>Jai ho baba ki </h1>
+      <Card />
     </div>
   );
 }
