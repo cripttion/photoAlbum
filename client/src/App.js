@@ -1,13 +1,17 @@
 import './App.css';
+import ImgCarousels from './Component/ImgCarousels';
 import Imgcards from './Component/Imgcards';
+
+
 
 
 function App() {
   return (
-    <div className="App ml-4 mt-4">
-      <Imgcards
+    <div className="crouselImg">
+      {/* <Imgcards
         name="Bibek & Buggu"
-      />
+      /> */}
+      <ImgCarousels />
     </div>
   );
 }
