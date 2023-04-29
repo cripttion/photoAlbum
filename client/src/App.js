@@ -1,19 +1,14 @@
 import './App.css';
-<<<<<<< HEAD
-import Card from './Component/Card';
+import Imgcards from './Component/Imgcards';
+
 
 function App() {
   return (
     <div className="App ml-4 mt-4">
-      <Card />
+      <Imgcards
+        name="Bibek & Buggu"
+      />
     </div>
-=======
-function App() {
-  return (
-    <>
-    hi and hello
-    </>
->>>>>>> origin/main
   );
 }
 
