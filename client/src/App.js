@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App ml-4 mt-4">
-        <h1>ready</h1>
+        <h1>Jai ho baba ki </h1>
     </div>
   );
 }
