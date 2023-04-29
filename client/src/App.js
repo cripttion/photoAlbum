@@ -1,18 +1,26 @@
 import './App.css';
-import ImgCarousels from './Component/ImgCarousels';
-import Imgcards from './Component/Imgcards';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-
-
+import Header from './Component/Header';
+import About from './Component/About';
+import Contact from './Component/Contact';
+import Create from './Component/Create';
+import Home from './Component/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-    <div className="crouselImg">
-      {/* <Imgcards
-        name="Bibek & Buggu"
-      /> */}
-      <ImgCarousels />
-    </div>
+    <>
+    <Header/>
+    
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/create" element={<Create />} />
+      </Routes>
+    
+    </>
+   
   );
 }
 

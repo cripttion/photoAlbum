@@ -1,43 +1,21 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
+import {Carousel} from '3d-react-carousal';
 
-const images = [
-  {
-    id: 1,
-    src: 'https://images.unsplash.com/photo-1622750660403-f0ccf7220fb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80',
-    alt: 'First slide',
-    caption: 'First slide caption',
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1622750660403-f0ccf7220fb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80',
-    alt: 'Second slide',
-    caption: 'Second slide caption',
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1622750660403-f0ccf7220fb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80',
-    alt: 'Third slide',
-    caption: 'Third slide caption',
-  },
-];
 
+let slides = [
+    <img  src="https://picsum.photos/800/300/?random" alt="1"  width='500' height={'700px'} />,
+    <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
+    <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
+    <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
+    <img src="https://picsum.photos/800/304/?random" alt="5" />   ];
 function ImgCarousels() {
-  return (
+    
+    return (
     <div>
-      <Carousel>
-        {images.map((image) => (
-          <Carousel.Item key={image.id}>
-            <img className="w-full" src={image.src} alt={image.alt} />
-            <Carousel.Caption>
-              <h3>{image.caption}</h3>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+    <Carousel className="w-100" slides={slides} autoplay={true} interval={3000} arrows={false}/>
+  
     </div>
-  );
+  )
 }
 
-export default ImgCarousels;
+export default ImgCarousels
