@@ -1,1 +1,41 @@
-This is readfile bibek this is for texing
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
+
+function Header() {
+  return (
+    <Navbar sticky="top" bg="" className='bg-white h-20 text-black p-2'  expand="lg">
+      
+        <Link to="/" className='font-semibold text-black no-underline text-xl'>Flashback Gallery</Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto font-semibold w-full sm:gap-0 md:gap-0 lg:gap-4 xl:gap-7 justify-center text-lg ">
+           
+          </Nav>
+          <div className="icons justify-end p-5">
+            <Link className='p-2 text-black no-underline' to ="/about">About</Link>
+            <Link className='p-2 text-black no-underline' to ="/about">About</Link>
+
+
+            </div>
+        </Navbar.Collapse>
+     
+    </Navbar>
+    // <>
+    //   <div className='d-grid align-items-center justify-content-center'>
+    //     <ul className='grid grid-cols-5 gap-5 h-12 text-center content-center justify-center sm:col-span-1 lg:col-span-5 xl:col-span-5 md:col-span-3' >
+          
+    //       <li>Home</li>
+    //       <li>contact</li>
+    //       <li>Albums</li>
+    //       <li>About</li>
+    //       <li>Hire-Us</li>
+    //     </ul>
+    //   </div>
+    // </>
+  );
+}
+
+export default Header;

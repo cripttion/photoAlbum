@@ -1,18 +1,47 @@
-import React from 'react'
-import {Carousel} from '3d-react-carousal';
+// import React from 'react'
+// import {Carousel} from '3d-react-carousal';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Images from '../Images';
 
+const settings = {
+  dots: true, // Show navigation dots
+  infinite: true, // Allow infinite scrolling
+  speed: 500, // Transition speed in milliseconds
+  slidesToShow: 4, // Number of slides to show at once
+  slidesToScroll: 1, // Number of slides to scroll per navigation
+ // set autoplay speed in milliseconds
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
-let slides = [
-    <img  src="https://picsum.photos/800/300/?random" alt="1"  width='500' height={'700px'} />,
-    <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
-    <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
-    <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
-    <img src="https://picsum.photos/800/304/?random" alt="5" />   ];
 function ImgCarousels() {
     
     return (
     <div>
-    <Carousel className="w-100" slides={slides} autoplay={true} interval={3000} arrows={false}/>
+    <Slider {...settings}>
+      {Images.map((image) => (
+        <div key={image.id}>
+          <img src={image.url} alt={`Image ${image.id}`} className='p-4 transition duration-500 hover:scale-125' />
+        </div>
+      ))}
+    </Slider>
   
     </div>
   )
