@@ -1,21 +1,26 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Card from './Component/Card'
+
 import Header from './Component/Header';
-import About from './Component/About';
-import Contact from './Component/Contact';
-import Create from './Component/Create';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Create from './Pages/Create';
+import Home from './Pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Testing from './Component/Testing';
+import Bottom from './Component/Bottom';
+
 function App() {
   return (
     <>
     <Header/>
       <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/create" element={<Create />} />
       </Routes>
-    
+    <Bottom />
     </>
    
   );
