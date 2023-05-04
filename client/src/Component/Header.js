@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar sticky='top' collapseOnSelect expand="lg" bg='white'>
+    <Navbar sticky='top' collapseOnSelect expand="lg" bg='white' className="shadow-lg">
       
         <Link to="/"  className='no-underline italic'><Navbar.Brand>Snap-Trove</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Images from '../Images';
+import { Link } from 'react-router-dom';
 
 const settings = {
   dots: true, // Show navigation dots
@@ -37,8 +38,9 @@ function ImgCarousels() {
     <div>
     <Slider {...settings}>
       {Images.map((image) => (
-        <div key={image.id}>
-          <img src={image.url} alt={`Image ${image.id}`} className='p-4 transition duration-500 hover:scale-125' />
+        <div key={image.id} className='transition duration-500 hover:scale-125'>
+         <Link to="/about"> <img src={image.url} alt={`Image ${image.id}`} className='p-4 ' /></Link>
+         <h2 className='text-center'>Bibek and Buggu</h2>
         </div>
       ))}
     </Slider>
